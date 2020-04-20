@@ -1,0 +1,215 @@
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true
+intents:
+- fine
+- howyou
+- ask_help
+- gratitude
+- default
+- did_that_help
+- ask_again
+- goodbye
+- greet
+- affirm
+- deny
+- tradefi
+- tradefi_legal
+- tradefi_start
+- tradefi_who
+- tradefi_how_long
+- tradefi_withdraw
+- tradefi_statement
+- tradefi_personal
+- tradefi_query
+- tradefi_okay
+- tradefi_multiple
+- tradefi_bvn
+- tradefi_dont_have_bvn
+- tradefi_info
+- photos
+- affirm or thanks
+- trade_fi
+- tradefi_details_needed
+- tradefi_new
+- issues
+- connect_expert
+- my_name_is
+- news
+entities:
+- STATEMENT
+- ISSUE
+- START
+- BVN
+- TRADEFI
+- CASHOUTwithdraw
+- OKAY
+- LEGAL
+- CASHOUT
+- NO_BVN
+- DURATION
+- CONNECT
+- NAME
+- QUERY
+- MULTIPLE
+- DETAILS
+- WHO
+responses:
+  utter_ask_again:
+  - text: Can you ask your question again
+  - text: Please reframe your question
+  - text: if you are still having issues, can you please reframe your question
+  utter_ask_help:
+  - text: How can I help you
+  - text: How may I be of help
+  - text: Let me know how to help you today
+  utter_default:
+  - text: can you repeat your query?
+    buttons:
+    - title: want to start investing?
+      payload: /tradefi_start
+  - text: I am not sure what you are asking
+    buttons:
+    - title: Want to speak to an expert?
+      payload: /connect_expert
+  - text: I am sorry i dont really understand you, should i connect you to an expert
+    buttons:
+    - title: Want to speak to an expert?
+      payload: /connect_expert
+  utter_did_that_help:
+  - text: did that help
+  - text: I hope you are fine with answer
+  - text: I believe i was able to help
+  utter_fine:
+  - text: I'm fine too
+  - text: I'm fine thanks
+  utter_goodbye:
+  - text: bye
+  - text: chat with you next time
+  utter_gratitude:
+  - text: Glad i could help
+  - text: I'm happy to help
+  utter_greet:
+  - text: Welcome, I am Mula, how can i help you today?
+    image: https://res.cloudinary.com/dj9ywvcsj/image/upload/v1584535078/WhatsApp_Image_2019-10-30_at_3.45.39_PM.jpg
+    buttons:
+    - title: Learn about Tradefi, ask me any question
+      payload: /tradefi
+    - title: Talk to our Expert
+      payload: /connect_expert
+    - title: Learn COVID-19 safety tips 
+      payload: /covid
+  - text: Hey I am Mula. How can i help you today
+    image: https://res.cloudinary.com/dj9ywvcsj/image/upload/v1584535078/WhatsApp_Image_2019-10-30_at_3.45.39_PM.jpg
+    buttons:
+    - title: Learn about Tradefi, ask me any question
+      payload: /tradefi
+    - title: Talk to our Expert
+      payload: /connect_expert
+    - title: Learn COVID-19 safety tips 
+      payload: /covid
+  - text: Welcome to our Live Chat. I am Mula, how may i help you
+    image: https://res.cloudinary.com/dj9ywvcsj/image/upload/v1584535078/WhatsApp_Image_2019-10-30_at_3.45.39_PM.jpg
+    buttons:
+    - title: Learn about Tradefi, ask me any question
+      payload: /tradefi
+    - title: Talk to our Expert
+      payload: /connect_expert
+    - title: Learn COVID-19 safety tips 
+      payload: /covid
+  utter_tradefi:
+  - text: tradeFi is a desktop and mobile application designed for users to learn
+      about the fixed income market, practice how to trade and finally engage in investing
+      and trading fixed income instruments. The securities TradeFi lets you invest
+      in are Federal Government of Nigeria (FGN) Bonds and Nigerian Treasury Bills
+      (NTB).
+  utter_tradefi_legal:
+  - text: tradeFi is endorsed by the FMDQ, a registered OTC Securities Exchange by
+      Security and Exchange Commission (SEC) and Self-Regulatory Organization (SRO)
+      for the OTC markets.
+  utter_tradefi_start:
+  - text: It is simple, just download the tradeFi app from Play Store on your android
+      mobile devices or download the app from iOS App Store or access the app through
+      your apple phone browser. You can also visit https://www.tradefi.ng.
+    image: https://res.cloudinary.com/dj9ywvcsj/image/upload/v1584459186/tradefi.png
+  utter_tradefi_who:
+  - text: ' Anyone with access to an internet connection and a computer, mobile phone
+      or tablet. The app is free to download.'
+  utter_transfer:
+  - text: i'm transfering you to an expert
+  - text: let me transfer you to an expert
+  utter_tradefi_how_long:
+  - text: All buy or sale transactions take two business days to settle and you to
+      receive value.
+  utter_tradefi_withdraw:
+  - text: Withdrawals are processed within 2 business days. All withdrawals made outside
+      this time would be processed the following business day.
+  utter_tradefi_statement:
+  - text: You will be able to access their statement of accounts on their computers
+      and phones on the TradeFi platform.
+  utter_tradefi_personal:
+  - text: Your personal information can be edited in the information section at the
+      top right corner on any page within TradeFi.
+  utter_tradefi_query:
+  - text: This is necessary as it is a part of our KYC (Know Your Customer) process.
+      It is also a security measure so we can attach a face to a profile, to safeguard
+      your account.
+  utter_tradefi_okay:
+  - text: You will get a confirmation email activating your account. In the event
+      that unsuitable documents are provided, we will send you an e-mail stating what
+      documents or information is outstanding.
+  utter_tradefi_multiple:
+  - text: No, you cannot open multiple accounts.
+  utter_tradefi_bvn:
+  - text: TradeFi needs your BVN for verification and security as it is a number unique
+      to each person, almost like a digital fingerprint. Your safety is important
+      to use
+  utter_tradefi_dont_have_bvn:
+  - text: Use *506# on any network to get your bvn. terms and conditions applied
+  utter_tradefi_details_needed:
+  - text: You will need your Bank Verification Number (BVN), passport photograph,
+      valid means of identification and utility bill during the onboarding process.
+      Kindly note that you can complete your registration without uploading documentation
+      but you will be required to upload these documents before liquidating your investments.
+  utter_tradefi_new:
+  - text: TradeFi now has a new User Interface. It's lovely
+    image: "https://res.cloudinary.com/dj9ywvcsj/image/upload/v1584541718/tradefi_new.png"
+  utter_covid:
+  - text: Please refer to the image to get safety tips on corona virus.
+    image: "https://res.cloudinary.com/dj9ywvcsj/image/upload/v1587333793/coronavirusblogimages1800x666.gif"
+
+actions:
+- utter_fine
+- utter_greet
+- utter_transfer
+- utter_ask_help
+- utter_did_that_help
+- utter_goodbye
+- utter_default
+- utter_gratitude
+- utter_ask_again
+- utter_tradefi
+- utter_tradefi_legal
+- utter_tradefi_start
+- utter_tradefi_who
+- utter_tradefi_how_long
+- utter_tradefi_withdraw
+- utter_tradefi_statement
+- utter_tradefi_personal
+- utter_tradefi_query
+- utter_tradefi_okay
+- utter_tradefi_multiple
+- utter_tradefi_bvn
+- utter_tradefi_dont_have_bvn
+- action_photo
+- utter_tradefi_details_needed
+- utter_affirm
+- action_call_expert
+- utter_tradefi_new
+- action_news
+- utter_submit
+- utter_ask_ID
+- utter_ask_NAME
+- utter_issues_id
+- utter_we_help
+- utter_tradefi_info
